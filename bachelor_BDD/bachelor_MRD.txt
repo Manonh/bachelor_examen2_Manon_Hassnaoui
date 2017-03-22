@@ -1,0 +1,9 @@
+# Modèle créé le : Wed Mar 22 16:48:31 CET 2017 
+
+CLIENT (id_client, nom_client, adresse_client, tel_client, mail_client) 
+PROJET (id_projet, nom_projet, concept_projet, date_deb_projet, deadline_projet) 
+TACHE (id_tache, nom_tache, date_deb_tache, deadline_tache, #id_projet) 
+SYNTHESE (id_synthese, nom_synthese, note_synthese, #id_projet) 
+UTILISATEUR (id_utilisateur, login_utilisateur, mdp_utilisateur) 
+commande (id_client, id_projet) 
+travaille (id_projet, id_utilisateur) 

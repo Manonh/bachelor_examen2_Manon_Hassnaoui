@@ -1,0 +1,45 @@
+# BACHELOR_PARTIEL_ANDROID_MANON_HASSNAOUI
+Partiels du 2eme bachelor : Application Android, Base de données et Web Service
+
+Composantes du dossier:
+
+- MCD et MRD de la base de données :
+
+	Contient une image du MCD et fichier.txt du MRD.
+
+- Zip de bachelor_bdd.sql:
+
+	Script pour la création de la base de données, qui a été importé dans PHPMysql
+	(celle-ci est vide, puisque que le but était de la remplir via l'application)
+
+- Sources "Web_service" :
+
+	Contient les fichiers PHP:
+		db_connect.php, implémente les méthodes pour connecter le PHP à la base de données
+		db_signup.php, requête pour insérer les données à l'inscription d'un nouvel utilisateur
+
+- Sources "NGL_studio_Manon_Hassnaoui", apps_mobiles:
+
+	Contient toutes les sources de l'application android
+
+/****** AVANCEMENT DU PROJET LORS DU RENDU --- POSTMORTEM *******/
+
+1) Rappel de l'énoncé
+
+L'application devait fournir à l'utilisateur l'ensemble des informations concernant la gestion des projets,
+disponible sur le serveur SQL distant. L'application demandera aussi à son utilisateur de se connecter via un
+compte utilisateur valide. Les infos concernant ce compte devront être obligatoirement hébergés sur le 
+serveur distant.
+Adapter evidemment l'application à la base de données.
+
+2) Avancement du projet
+
+	a. Une activité de connexion
+		Le PHP connexion n'est pas codé.
+		Il s'y trouve un bouton d'inscription au click, il renvoie vers l'activité d'inscription.
+
+	b. Une activité d'inscription
+		Dans celle-ci on remplit les champs pseudo et mot de passe, quand on clique sur le bouton,
+		même si le toast affiche AUCUNE DONNEES JSON, les données sont quand même insérées dans 
+		le base de données. 
+

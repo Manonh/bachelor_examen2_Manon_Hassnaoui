@@ -1,4 +1,5 @@
 /*Création de la base*/
+DROP database if EXISTS bachelor_bdd;
 CREATE database bachelor_bdd;
 
 use bachelor_bdd;
@@ -76,7 +77,7 @@ CREATE TABLE complete (
 	id_tache BIGINT NOT NULL, 
 	PRIMARY KEY (id_utilisateur,  id_tache) ) ENGINE=InnoDB;  
 
-/*creation des contraintes*/
+/*Création des ALTER TABLE*/
 ALTER TABLE TACHE ADD CONSTRAINT FK_TACHE_id_projet FOREIGN KEY (id_projet) REFERENCES PROJET (id_projet); 
 ALTER TABLE SYNTHESE ADD CONSTRAINT FK_SYNTHESE_id_projet FOREIGN KEY (id_projet) REFERENCES PROJET (id_projet); 
 ALTER TABLE SYNTHESE ADD CONSTRAINT FK_SYNTHESE_id_utilisateur FOREIGN KEY (id_utilisateur) REFERENCES UTILISATEUR (id_utilisateur); 
